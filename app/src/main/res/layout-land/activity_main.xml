@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.andre.vintagestore.MainActivity"
+    android:background="@drawable/vintagewall3">
+
+    <Button
+        android:text="@string/boton_pagar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:background="@drawable/compra2"
+        android:textColor="@android:color/black"
+        android:textStyle="normal|bold"
+        android:onClick="comprar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <!--- Boton para pagar la compra -->
+
+    <Button
+        android:text="@string/boton_sugerencias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:background="@drawable/compra2"
+        android:textStyle="normal|bold"
+        android:onClick="enviarCorreo"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <!--- Boton para hacer sugerencias -->
+
+    <Button
+        android:text="@string/boton_vaciar_carrito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4"
+        android:background="@drawable/compra2"
+        android:textStyle="normal|bold"
+        android:onClick="vaciarCarrito"
+        android:layout_marginBottom="13dp"
+        android:layout_above="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <!--- Boton para vaciar el carrito -->
+
+    <Button
+        android:text="@string/boton_agregar_carrito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:textStyle="normal|bold"
+        android:onClick="launchSecondActivity"
+        android:background="@drawable/compra2"
+        android:layout_marginBottom="11dp"
+        android:layout_above="@+id/button4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <!--- Boton para agregar productos al carrito -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:weightSum="1"
+        android:id="@+id/contenedorScroll"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:id="@+id/scroll"
+            android:layout_height="49dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/layoutcarrito">
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:text="A pagar $: 0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView15"
+            android:textColor="@android:color/background_light"
+            android:textStyle="normal|bold"
+            android:textSize="24sp" />
+        <!--- TextView dentro de un ScrollView para permitir el scrolling en el carrito de compras -->
+
+    </LinearLayout>
+
+</RelativeLayout>

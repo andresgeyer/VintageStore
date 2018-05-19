@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Vintage Store</string>
+    <string name="ActividadProductosNombre">Productos Vintage</string>
+    <string name="boton_sugerencias">Sugerencias</string>
+    <string name="boton_pagar">Pagar compra</string>
+    <string name="boton_agregar_carrito">Agregar al carrito</string>
+    <string name="boton_vaciar_carrito">Vaciar carrito</string>
+</resources>
